@@ -18,7 +18,7 @@ Running the Example
 
 Change to the ``zinc_view_graphics`` directory under the location where you unzipped the example files and run the example script with::
 
-  python zinc_view_graphics
+  python zinc_view_graphics.py
 
 You should see a window containing a graphical visualisation of the cube and its fields as in the following figure:
 
