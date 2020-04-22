@@ -10,7 +10,7 @@ License, v. 2.0. If a copy of the MPL was not distributed with this
 file, You can obtain one at http://mozilla.org/MPL/2.0/.
 """
 import sys
-from PySide import QtGui
+from PySide2 import QtWidgets
 from zinc_view_graphics_ui import Ui_ZincViewGraphics
 
 from opencmiss.zinc.context import Context as ZincContext
@@ -19,7 +19,7 @@ from opencmiss.zinc.glyph import Glyph
 from opencmiss.zinc.material import Material
 from opencmiss.zinc.status import OK as ZINC_OK
 
-class ZincViewGraphics(QtGui.QMainWindow):
+class ZincViewGraphics(QtWidgets.QMainWindow):
     '''
     Create a subclass of QWidget for our application.  We could also have derived this 
     application from QMainWindow to give us a menu bar among other things, but a
@@ -31,7 +31,7 @@ class ZincViewGraphics(QtGui.QMainWindow):
         '''
         Initialise the ZincViewGraphics first calling the QMainWindow __init__ function.
         '''
-        QtGui.QMainWindow.__init__(self, parent)
+        QtWidgets.QMainWindow.__init__(self, parent)
 
         # create instance of Zinc Context from which all other objects are obtained
         self._context = ZincContext("ZincViewGraphics");
@@ -156,7 +156,7 @@ def main():
     GUI.
     '''
     
-    app = QtGui.QApplication(sys.argv)
+    app = QtWidgets.QApplication(sys.argv)
 
     w = ZincViewGraphics()
     w.show()
